@@ -15,7 +15,10 @@ function App() {
     < >
 
       <BrowserRouter>
+      <div className='z-10'>
       <Header />
+      </div>
+      
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
