@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-link {
+    color: red;
+    /* Set the color for the active link */
+}
