@@ -2,43 +2,46 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Image3 from '../assets/Images/image3.jpg';
-import Image7 from '../assets/Images/image7.avif';
-import Image12 from '../assets/Images/image12.png';
-import Image6 from '../assets/Images/image6.jpg';
-import Image8 from '../assets/Images/image8.jpg';
+import movie1 from '../assets/Images/movie1.avif';
+import movie2 from '../assets/Images/movie2.jpg';
+import movie3 from '../assets/Images/movie3.avif';
+import movie4 from '../assets/Images/movie4.avif';
 
-const images = [Image3, Image7, Image12, Image6, Image8];
+const images = [movie1, movie2, movie3, movie4];
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [text, setText] = useState('Welcome to Sneakers');
+  const [text, setText] = useState('Welcome to Sneak Movie Room For you and your family');
   const [textColor, setTextColor] = useState('text-white');
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-      // Set different text and text colors based on the index
-      switch (currentIndex) {
-        case 0:
-          setText('We are located along Kahawa Barracks');
-          setTextColor('text-red-500');
-          break;
-        case 1:
-          setText('Find your size at a cheaper price');
-          setTextColor('text-yellow-500');
-          break;
-        case 2:
-          setText('Prices from 1500/=');
-          setTextColor('text-blue-500');
-          break;
-        default:
-          setText('Welcome to Sneakers');
-          setTextColor('text-white');
-          break;
-      }
     }, 3000); // Change this value to adjust the speed
+
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Set different text and text colors based on the index
+    switch (currentIndex) {
+      case 0:
+        setText('We are located along Kahawa Barracks Road<br>A movie theater place for all of you. Just grab<br>your seat and enjoy with Popcorns and a<br>sip of cold Coke.');
+        setTextColor('text-yellow-500');
+        break;
+      case 1:
+        setText('Find movie at a cheaper price');
+        setTextColor('text-red-500');
+        break;
+      case 2:
+        setText('Prices from 50/= per movie for adults and 25/= for kids');
+        setTextColor('text-green-500');
+        break;
+      default:
+        setText('Welcome to Sneak Movie Room');
+        setTextColor('text-white');
+        break;
+    }
   }, [currentIndex]);
 
   const settings = {
@@ -61,8 +64,11 @@ const Home = () => {
           </div>
         ))}
       </Slider>
-      <div className={`absolute inset-0 flex items-center justify-center bg-opacity-50 ${textColor}`}>
-        <h1 className="text-4xl lg:text-6xl font-bold text-center px-6 lg:px-0">{text}</h1>
+      <div className={`absolute inset-0 flex items-center justify-center bg-opacity-50`}>
+        <h1
+          className={`text-4xl lg:text-6xl font-bold text-center px-6 lg:px-0 ${textColor}`}
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
       </div>
     </div>
   );
