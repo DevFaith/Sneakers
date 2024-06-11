@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import Contacts from './Pages/Contacts'
 import Menu from './Pages/Menu'
+import Shoe from './Pages/Shoe'
 
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/shoe' element={<Shoe />} />
           <Route path='/contacts' element={<Contacts />} />
           <Route path='/menu' element={<Menu />} />
         </Routes>
