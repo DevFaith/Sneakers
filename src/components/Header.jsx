@@ -10,7 +10,7 @@ const Header = () => {
     <>
       <div className='w-full relative h-16 bg-red-400 border-b border-red-200 px-5 flex justify-between items-center'>
         <div className='flex justify-start gap-20 items-center'>
-          <h1 className='text-5xl text-white-400 '>Sneakers</h1>
+          <h1 className='text-5xl text-white-400 '>Sneak Movie Room</h1>
         </div>
         <div className='hidden md:flex justify-center items-center'>
           <ul className='flex gap-8 text-white text-2xl'>
