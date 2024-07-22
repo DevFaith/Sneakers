@@ -1,11 +1,10 @@
-
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Contacts from './Pages/Contacts'
 import Menu from './Pages/Menu'
-import Shoe from './Pages/Shoe'
+import Moviebox from './Pages/Moviebox'
 
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -23,7 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/shoe' element={<Shoe />} />
+          <Route path='/moviebox' element={<Moviebox />} />
           <Route path='/contacts' element={<Contacts />} />
           <Route path='/menu' element={<Menu />} />
         </Routes>
