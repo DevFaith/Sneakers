@@ -24,7 +24,7 @@ const Menu = () => {
       (movieList.length>0 && movieList.map(({name="",description="",poster="",imdb_id="",cast=[]})=><div className="mb-8 p-6 bg-red-100 rounded-lg shadow-md flex items-center gap-4">
                <img src={poster} alt="Air Max 270" className="w-1/3 h-64 object-cover rounded-md" />
                <div>
-                 <a href={`/shoe?imdb_id=${imdb_id}`}><h2 className="text-2xl font-bold mb-2">{name}</h2></a>
+                 <a href={`/moviebox?imdb_id=${imdb_id}`}><h2 className="text-2xl font-bold mb-2">{name}</h2></a>
                  <p className="text-gray-700">{description}</p>
                  <ul className="mt-2 list-disc list-inside text-gray-600">
                   {cast.map((castName)=><li>{castName}</li>)}
