@@ -17,8 +17,8 @@ Sneak Movie Room is a digital platform that simulates a theater experience. Brow
 
 ## Installation & Setup
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/sneak-movie-room.git
+   ```bash[
+   git clone https://github.com/your-username/sneak-movie-room.git](https://github.com/DevFaith/Sneakers.git)
    ```
 2. Navigate to the project directory:
    ```bash
